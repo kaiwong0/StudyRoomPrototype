@@ -1,0 +1,156 @@
+/* GLOBAL PAGE STYLING */
+
+body{
+  font-family:"Segoe UI",Arial,sans-serif;
+  background:#f4f6fb;
+  margin:0;
+  
+  display:flex;
+  justify-content:center;
+  
+  min-height:100vh;
+  padding-top:40px;
+  }
+  
+  /* MAIN PAGE CONTAINER */
+
+  .container{
+  width:900px;
+  }
+  
+  /* PAGE HEADINGS */
+
+  h1{
+  text-align:center;
+  margin-bottom:20px;
+  color:#1f2937;
+  }
+  
+  h2{
+  margin-top:0;
+  color:#374151;
+  }
+  
+  /* CARD COMPONENT
+     Used for login, reservation creation, and reservation lists */
+
+  .card{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 6px 24px rgba(0,0,0,0.08);
+  margin-bottom:25px;
+  }
+  
+  /* LOGIN CARD LAYOUT */
+
+  .loginCard{
+  width:420px;
+  margin:auto;
+  }
+  
+  /* FORM ELEMENTS */
+
+  label{
+  font-weight:600;
+  display:block;
+  margin-top:12px;
+  margin-bottom:5px;
+  }
+  
+  input,select{
+  width:100%;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #d1d5db;
+  font-size:14px;
+  }
+  
+  /* INPUT FOCUS EFFECT */
+
+  input:focus,select:focus{
+  outline:none;
+  border-color:#2563eb;
+  box-shadow:0 0 0 2px rgba(37,99,235,0.15);
+  }
+  
+  /* BUTTON STYLING */
+
+  button{
+  margin-top:15px;
+  padding:10px 16px;
+  border:none;
+  border-radius:6px;
+  background:#2563eb;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  margin-right:8px;
+  }
+  
+  /* BUTTON HOVER EFFECT */
+
+  button:hover{
+  background:#1d4ed8;
+  }
+  
+  /* SECONDARY BUTTON (EX: RESET DEMO) */
+
+  button.secondary{
+  background:#6b7280;
+  }
+  
+  button.secondary:hover{
+  background:#4b5563;
+  }
+  
+  /* RESERVATION CARD DISPLAY */
+
+  .reservation{
+  padding:12px;
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  margin-bottom:10px;
+  background:#fafafa;
+  }
+  
+  /* SUCCESS MESSAGE */
+
+  #message{
+  color:green;
+  margin-top:10px;
+  font-weight:600;
+  }
+  
+  /* ERROR MESSAGE */
+
+  #error{
+  color:red;
+  margin-top:10px;
+  font-weight:600;
+  }
+  
+  /* LOGIN MESSAGE AREA */
+
+  #loginMsg{
+  margin-top:10px;
+  font-weight:600;
+  }
+
+  /* NOTIFICATION BANNER
+     Used to display alerts such as reservation overrides */
+
+.notification-banner{
+  background:#fef3c7;
+  border:1px solid #f59e0b;
+  color:#92400e;
+  padding:14px 16px;
+  border-radius:10px;
+  box-shadow:0 6px 24px rgba(0,0,0,0.05);
+  margin-bottom:20px;
+  font-weight:600;
+}
+
+.notification-banner div + div{
+  margin-top:8px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Study Room Reservations</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Main container for the student reservation interface -->
+<div class="container">
+
+<h1>Study Room Reservations</h1>
+
+<!-- Notification banner used to display messages to students (ex: reservation overridden) -->
+<div id="notification" class="notification-banner" style="display:none;"></div>
+
+<!-- Section where students create a new reservation -->
+<div class="card">
+
+<h2>Create Reservation</h2>
+
+<label>Name</label>
+<input id="name">
+
+<label>Email</label>
+<input id="email">
+
+<label>Date</label>
+<input id="date" type="date">
+
+<!-- Room selection dropdown -->
+<label>Room</label>
+<select id="room">
+
+<option>lib1 (whiteboard, projector)</option>
+<option>lib2 (whiteboard)</option>
+<option>lib3 (none)</option>
+
+<option>scdi1 (projector)</option>
+<option>scdi2 (whiteboard)</option>
+<option>scdi3 (none)</option>
+<option>scdi4 (whiteboard, projector)</option>
+<option>scdi5 (projector)</option>
+<option>scdi6 (whiteboard)</option>
+
+</select>
+
+<!-- Reservation visibility: private (solo) or public (others can join) -->
+<label>Reservation Type</label>
+<select id="visibility">
+<option value="private">Private</option>
+<option value="public">Public</option>
+</select>
+
+<label>Start Time</label>
+<input id="start" placeholder="4:00PM">
+
+<label>End Time</label>
+<input id="end" placeholder="8:00PM">
+
+<!-- Button triggers reservation creation logic in app.js -->
+<button id="createBtn">Create Reservation</button>
+
+<div id="message"></div>
+<div id="error"></div>
+
+</div>
+
+<!-- Section displaying reservations relevant to the logged-in student -->
+<div class="card">
+
+<h2>Your Reservations</h2>
+<div id="reservationList"></div>
+
+</div>
+
+</div>
+
+<!-- Loads the student-side JavaScript logic -->
+<script src="app.js"></script>
+
+</body>
+</html>

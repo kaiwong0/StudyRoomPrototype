@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Main container for the admin dashboard UI -->
+<div class="container">
+
+<h1>Admin Dashboard</h1>
+
+<!-- Section where an admin (professor) creates a class reservation -->
+<div class="card">
+
+<h2>Create Class Reservation</h2>
+
+<label>Class Name</label>
+<input id="className">
+
+<!-- Room selection dropdown for the reservation -->
+<label>Room</label>
+<select id="room">
+
+<option>lib1 (whiteboard, projector)</option>
+<option>lib2 (whiteboard)</option>
+<option>lib3 (none)</option>
+
+<option>scdi1 (projector)</option>
+<option>scdi2 (whiteboard)</option>
+<option>scdi3 (none)</option>
+<option>scdi4 (whiteboard, projector)</option>
+<option>scdi5 (projector)</option>
+<option>scdi6 (whiteboard)</option>
+
+</select>
+
+<label>Date</label>
+<input id="date" type="date">
+
+<label>Start Time</label>
+<input id="start" placeholder="4:00PM">
+
+<label>End Time</label>
+<input id="end" placeholder="8:00PM">
+
+<!-- Button that triggers reservation creation logic in admin.js -->
+<button id="createAdminRes">Create Reservation</button>
+
+<div id="message"></div>
+<div id="error"></div>
+
+</div>
+
+<!-- Section for managing students in an existing reservation -->
+<div class="card">
+
+<h2>Add Student to Reservation</h2>
+
+<!-- Admin enters reservation ID to modify its participants -->
+<label>Reservation ID</label>
+<input id="resId">
+
+<label>Student Name</label>
+<input id="studentName">
+
+<label>Student Email</label>
+<input id="studentEmail">
+
+<!-- Buttons that call admin.js logic to add or remove students -->
+<button id="addStudent">Add Student</button>
+<button id="removeStudent">Remove Student</button>
+
+</div>
+
+<!-- Displays reservations created by the currently logged-in admin -->
+<div class="card">
+
+<h2>Your Reservations</h2>
+<div id="reservationList"></div>
+
+</div>
+
+</div>
+
+<!-- Loads the admin-side JavaScript that controls reservation logic -->
+<script src="admin.js"></script>
+
+</body>
+</html>

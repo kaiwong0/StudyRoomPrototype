@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Study Room Reservation Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Main container for the login interface -->
+<div class="container">
+
+<!-- Login card UI for entering credentials -->
+<div class="card loginCard">
+
+<h1>Study Room Reservation</h1>
+
+<label>Name</label>
+<input id="name">
+
+<!-- Email input restricted to SCU emails -->
+<label>Email (@scu.edu)</label>
+<input id="email">
+
+<!-- Role selection determines which dashboard the user will access -->
+<label>Role</label>
+<select id="role">
+<option value="STUDENT">Student</option>
+<option value="ADMIN">Admin</option>
+</select>
+
+<!-- Button triggers login validation logic in login.js -->
+<button id="loginBtn">Login</button>
+
+<!-- Button clears demo data stored in localStorage -->
+<button class="secondary" onclick="resetDemo()">Reset Demo</button>
+
+<!-- Area where login success or error messages are displayed -->
+<div id="loginMsg"></div>
+
+</div>
+
+</div>
+
+<!-- Loads login validation and routing logic -->
+<script src="login.js"></script>
+
+</body>
+</html>
